@@ -1,0 +1,91 @@
+version: "2"
+
+networks: 
+  ci-net: 
+   driver: bridge
+services: 
+  jenkins: 
+    build: 
+      context: ./jenkins2
+      dockerfile: jenkins2_tls.dockerfile
+      args:
+        DOCKER_HOST: $DOCKER_HOST
+    volumes:
+      - /home/docker:/var/jenkins_home
+    depends_on: 
+      - nexus
+      - sonar
+      - selhub
+    links: 
+      - "nexus:nexus"
+      - "sonar:sonar"
+      - "selhub:selhub"
+      - "nexus3:nexus3"
+    networks: 
+      - ci-net
+    ports: 
+      - "18080:8080"
+      - "50000:50000"
+  nexus: 
+    build: 
+      context: ./nexus2
+      dockerfile: nexus2.dockerfile
+    networks: 
+      - ci-net
+    ports: 
+      - "18081:8081"
+  nexus3:
+    build:
+      context: ./nexus3
+      dockerfile: nexus3.dockerfile
+    networks:
+      - ci-net
+    ports:
+      - "18082:8081"
+      - "18085:8085"
+      - "18086:8086"
+  nodech: 
+    depends_on: 
+      - selhub
+    environment: 
+      - HUB_PORT_4444_TCP_ADDR=selhub
+    image: selenium/node-chrome:2.53.0
+    networks: 
+      - ci-net
+    ports: 
+      - "15900:5900"
+  nodeff: 
+    depends_on: 
+      - selhub
+    environment: 
+      - HUB_PORT_4444_TCP_ADDR=selhub
+    image: selenium/node-firefox:2.53.0
+    networks: 
+      - ci-net
+    ports: 
+      - "15901:5900"
+  selhub: 
+    image: selenium/hub:2.53.0
+    networks: 
+      - ci-net
+    ports: 
+      - "14444:4444"
+  sonar: 
+    build: ./sonar5
+    depends_on: 
+      - sonardb
+    environment: 
+      - "SONARQUBE_JDBC_URL=jdbc:postgresql://sonardb:5432/sonar"
+    networks: 
+      - ci-net
+    ports: 
+      - "19000:9000"
+  sonardb: 
+    environment: 
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=sonar
+    image: postgres
+    networks: 
+      - ci-net
+    ports:
+      - "15432:5432"

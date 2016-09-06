@@ -1,0 +1,13 @@
+{
+  "_id": "_design/beer",
+  "language": "javascript",
+  "views": {
+    "brewery_beers": {
+      "map": "function(doc, meta) {\n  switch(doc.type) {\n  case \"brewery\":\n    emit([meta.id]);\n    break;\n  case \"beer\":\n    if (doc.brewery_id) {\n      emit([doc.brewery_id, meta.id]);\n    }\n    break;\n  }\n}\n"
+    },
+    "beer": {
+      "map": "function (doc, meta) {\n  if (doc.date && doc.title) {\n    emit(doc.date, doc.title);\n  } \n}",
+      "reduce": "_count"
+    }
+  }
+}

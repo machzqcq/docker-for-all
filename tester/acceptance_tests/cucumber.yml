@@ -1,0 +1,1 @@
+default: --no-source --color BROWSER=firefox --format pretty  --format html --out results.html --format json --out reports.json

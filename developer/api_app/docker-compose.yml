@@ -1,0 +1,31 @@
+version: "2"
+
+networks:
+  api-net:
+    driver: bridge
+
+services:
+  api_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        NEXUS_SERVER: $NEXUS_SERVER
+    env_file: env_vars/api_app_env_vars.env
+    ports:
+      - '3412:3412'
+    volumes:
+      - .:/home/app/api_app
+      - /home/app/api_app/node_modules
+    networks:
+      - api-net
+    links:
+      - "couchbase:couchbase"
+  
+  couchbase: 
+    image: couchbase:community-4.0.0
+    networks:
+      - api-net
+    ports: 
+      - "8091-8094:8091-8094"
+      - "11210:11210"

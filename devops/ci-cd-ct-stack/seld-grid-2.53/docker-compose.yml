@@ -1,0 +1,33 @@
+version: "2"
+
+networks:
+  sel-net:
+   driver: bridge
+services:
+  nodech:
+    depends_on:
+      - selhub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selhub
+    image: selenium/node-chrome:2.53.0
+    networks:
+      - sel-net
+    ports:
+      - "5900"
+  nodeff:
+    depends_on:
+      - selhub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selhub
+    image: selenium/node-firefox:2.53.0
+    networks:
+      - sel-net
+    ports:
+      - "5900"
+  selhub:
+    image: selenium/hub:2.53.0
+    networks:
+      - sel-net
+    ports:
+      - "4444:4444"
+

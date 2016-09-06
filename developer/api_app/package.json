@@ -1,0 +1,22 @@
+{
+  "name": "api_app",
+  "version": "0.0.0",
+  "description": "Simple api express app",
+  "author" : "Pradeep Macharla",
+  "main" : "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "assert": "^1.3.0",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "http": "0.0.0",
+    "mocha": "^2.4.5",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0",
+    "couchbase": "2.2.1"
+  }
+}

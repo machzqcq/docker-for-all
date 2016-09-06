@@ -1,0 +1,1 @@
+default: --no-source --color BASE_URL=http://localhost:3412 --format pretty  --format html --out results.html --format json --out reports.json
