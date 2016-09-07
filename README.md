@@ -85,11 +85,11 @@ This code helps developers, devops and testers (ok I will be honest , test "auto
 
 ###Mac Mini
 
-![My Setup](https://github.com/machzqcq/docker-for-ci/blob/master/images/MySetup.png)  
+![My Setup](https://github.com/machzqcq/docker-for-all/blob/master/images/MySetup.png)  
 
 ###Windows
 
-![My Setup Windows](https://github.com/machzqcq/docker-for-ci/blob/master/images/MySetup-windows.png)  
+![My Setup Windows](https://github.com/machzqcq/docker-for-all/blob/master/images/MySetup-windows.png)  
 
 #### Explanation of the above diagrams
 
@@ -175,15 +175,15 @@ cicdctstack_sonardb_1          /docker-entrypoint.sh          Up                
 - So when the container comes up, if you access jenkins for e.g. http://192.168.99.100:18080, the below screen shows up
 - The password can be retrieved by executing `docker logs <jenkins_container_id>`  
 
-![Jenkins initial password](https://github.com/machzqcq/docker-for-ci/blob/master/images/jenkins2-initial-password.png)  
+![Jenkins initial password](https://github.com/machzqcq/docker-for-all/blob/master/images/jenkins2-initial-password.png)  
 
 Continue with default plugins selection  
 
-![Jenkins plugins install](https://github.com/machzqcq/docker-for-ci/blob/master/images/jenkins2-plugins.png)  
+![Jenkins plugins install](https://github.com/machzqcq/docker-for-all/blob/master/images/jenkins2-plugins.png)  
 
 Plugins installation progresses as below  
 
-![Jenkins plugins progress](https://github.com/machzqcq/docker-for-ci/blob/master/images/jenkins2-plugins-installing.png)  
+![Jenkins plugins progress](https://github.com/machzqcq/docker-for-all/blob/master/images/jenkins2-plugins-installing.png)  
 
 - Install docker jenkins plugins   
 
@@ -192,13 +192,13 @@ Rest of the explanation is inside the course videos
 ## Nexus 2
 Access Nexus2 on port 18081 on docker host. Alternately, if you have the port mapping defined, you can access it using localhost:18081.   
 
-![Nexus2](https://github.com/machzqcq/docker-for-ci/blob/master/images/nexus2.png) 
+![Nexus2](https://github.com/machzqcq/docker-for-all/blob/master/images/nexus2.png) 
 
 ## Nexus 3
 
 Access Nexus 3 port 18082 on docker host. We use Nexus 3 so that we can set up a docker repo. Nexus 2 does't have that support.
 
-![Nexus3](https://github.com/machzqcq/docker-for-ci/blob/master/images/nexus3.png)
+![Nexus3](https://github.com/machzqcq/docker-for-all/blob/master/images/nexus3.png)
 
 
 ## Monitoring and Visualization
@@ -214,7 +214,7 @@ scope launch
 
 Access on http://$(docker-machine ip default):4040   
 
-![Weave Scope](https://github.com/machzqcq/docker-for-ci/blob/master/images/visualization.png)
+![Weave Scope](https://github.com/machzqcq/docker-for-all/blob/master/images/visualization.png)
 
 # In Continual Progress
 
