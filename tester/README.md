@@ -15,15 +15,15 @@ It is highly recommended to complete the fundamental concepts videos before movi
 
 ## Sonarqube
 
-![sonarqube](https://github.com/machzqcq/docker-for-ci/blob/master/images/sonarqube.png)
+![sonarqube](https://github.com/machzqcq/docker-for-all/blob/master/images/sonarqube.png)
 
 ## Selenium GRID
 
-![sel-grid](https://github.com/machzqcq/docker-for-ci/blob/master/images/sel-grid.png)
+![sel-grid](https://github.com/machzqcq/docker-for-all/blob/master/images/sel-grid.png)
 
 ## Test Automation Suite
 
-![Test-Automation-Folder](https://github.com/machzqcq/docker-start-to-finish/blob/master/images/test-automation-suite.png)
+![Test-Automation-Folder](https://github.com/machzqcq/docker-for-all/blob/master/images/test-automation-suite.png)
 
 ## Execution and Results
-![Test-Execution-Results](https://github.com/machzqcq/docker-start-to-finish/blob/master/images/test-execution-results.png)
+![Test-Execution-Results](https://github.com/machzqcq/docker-for-all/blob/master/images/test-execution-results.png)
