@@ -4,7 +4,7 @@ Starts Jenkins 2, Nexus 2, Nexus 3, Sonarqube 5.1 and Selenium Grid 2.53 (with o
 
 # Overall Architecture
 
-![ci-cd-ct Architecture](https://github.com/machzqcq/docker-tester/blob/master/images/ci-cd-ct.png)  
+![ci-cd-ct Architecture](https://github.com/machzqcq/docker-for-all/blob/master/images/ci-cd-ct.png)  
 
 - Virtualbox instance is docker host i.e. docker-engine - This is like the master that kicks off all containers
 - docker-compose ensures that containers are in the right networks and can communicate. It also ensures that the services can be managed through one single file i.e. docker-compose.yml
