@@ -18,6 +18,6 @@ Complete the fundamental concepts videos in the root README.md before moving fur
 
 ## Continuous Delivery Pattern
 
-![Jenkins Docer Pipeline](https://github.com/machzqcq/docker-start-to-finish/blob/master/images/jenkins-docker-pipeline.png?raw=true)  
+![Jenkins Docer Pipeline](https://github.com/machzqcq/docker-for-all/blob/master/images/jenkins-docker-pipeline.png)  
 
-![Jenkins Docker Pipeline with Nexus](https://github.com/machzqcq/docker-start-to-finish/blob/master/images/jenkins-docker-pipeline-nexus3.png?raw=true)
+![Jenkins Docker Pipeline with Nexus](https://github.com/machzqcq/docker-for-all/blob/master/images/jenkins-docker-pipeline-nexus3.png)
