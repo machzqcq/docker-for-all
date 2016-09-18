@@ -29,15 +29,15 @@ It is highly recommended to complete the fundamental concepts videos before movi
 | *Fundamental Concepts*                              |
 |-------------------------------------|
 | [Install Docker](https://vimeo.com/176871633)   - on a *nix server (28:21)            |
-| [Install Docker ToolBox](https://vimeo.com/168685756) - Development environment for docker-engine, docker-compose, hypervisors etc.|
-| [Install Docker natively on mac](https://vimeo.com/181244227) - As a developer, use docker during development|
-| [Docker Machine - Virtualbox](https://vimeo.com/181324717) - docker-machine on virtualbox hypervisor|
-| [Docker Machine - AWS](https://vimeo.com/181324962) - docker-machine on amazon ec2 (Private)|
-| [Docker Machine - Azure](https://vimeo.com/181489810) - docker-machine on Azure (Private)|
-| [Docker images](https://vimeo.com/176874462) - Docker for creating images                       |
-| [Docker Containers](https://vimeo.com/176892954) - Instantiate docker images - containers     |
-| [Docker Containers - More commands](https://vimeo.com/176934100) - A little more deeper dive into containers |
-| [Docker build](https://vimeo.com/176939172) - Understanding docker build                  |
+| [Install Docker ToolBox](https://vimeo.com/168685756) - Development environment for docker-engine, docker-compose, hypervisors etc. (5:25)|
+| [Install Docker natively on mac](https://vimeo.com/181244227) - As a developer, use docker during development (3:24)|
+| [Docker Machine - Virtualbox](https://vimeo.com/181324717) - docker-machine on virtualbox hypervisor(9:02)|
+| [Docker Machine - AWS](https://vimeo.com/181324962) - docker-machine on amazon ec2 (Private)(14:59)|
+| [Docker Machine - Azure](https://vimeo.com/181489810) - docker-machine on Azure (Private)(24:58)|
+| [Docker images](https://vimeo.com/176874462) - Docker for creating images(13:51)                       |
+| [Docker Containers](https://vimeo.com/176892954) - Instantiate docker images - containers(31:59)     |
+| [Docker Containers - More commands](https://vimeo.com/176934100) - A little more deeper dive into containers(14:06) |
+| [Docker build](https://vimeo.com/176939172) - Understanding docker build(37:33)                  |
 
 # Separate Tracks
 
