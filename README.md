@@ -28,7 +28,7 @@ It is highly recommended to complete the fundamental concepts videos before movi
 
 | *Fundamental Concepts*                              |
 |-------------------------------------|
-| [Install Docker](https://vimeo.com/176871633)   - on a *nix server            |
+| [Install Docker](https://vimeo.com/176871633)   - on a *nix server (28:21)            |
 | [Install Docker ToolBox](https://vimeo.com/168685756) - Development environment for docker-engine, docker-compose, hypervisors etc.|
 | [Install Docker natively on mac](https://vimeo.com/181244227) - As a developer, use docker during development|
 | [Docker Machine - Virtualbox](https://vimeo.com/181324717) - docker-machine on virtualbox hypervisor|
