@@ -21,6 +21,8 @@ RUN git config --global url."https://".insteadOf git://
 WORKDIR docker-for-all/developer/web_app
 RUN npm install
 
+CMD npm start > server.log
+
 # Define default command and wait until db is started
 # An alternative to dockerize is plain shell script as described here - https://docs.docker.com/compose/startup-order/
 # entrypoint: ./wait-for-it.sh db:5432 under depends_on section for web
