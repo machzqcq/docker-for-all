@@ -52,13 +52,12 @@ It is highly recommended to complete the fundamental concepts videos before movi
 |[Build Unit Tests feedback loop](https://vimeo.com/180529349)| [SonarQube-TODO]()| [Ansible-Docker-Instructor Led]()|[Docker-Python-Notebooks](https://vimeo.com/168685694)| *Instructor Led*|
 |[Acceptance Tests feedback loop - Private](https://vimeo.com/180529568)| [SecurityTests-Instructor Led]()| [Kubernetes-Docker-Instructor Led]()| [More-Instructor Lead]()|*Instructor Led*|  
 
-# Best Practices
 
-# Best Practices
 
 | *Best Practices*                              |
 |-------------------------------------|
 | [Docker Build Labels](https://vimeo.com/183234013)   - Build labels, microbadger etc.          |  
+| [Docker bench security for docker hosts](https://vimeo.com/183236329) - Security best practices for deploying container in production|  
 
 
 
