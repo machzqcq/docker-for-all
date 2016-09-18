@@ -45,19 +45,19 @@ It is highly recommended to complete the fundamental concepts videos before movi
 
 | *Developer* | *Tester* | *DevOps* | *Product Owner* [Slides](http://slides.com/machzqcq/docker-for-product-owners#/) | *Productionizing*|
 | ------------- | ------------- | ------------- |-----------|--------------|
-| [Setup couchbase for api app](https://vimeo.com/180444021) | [Acceptance Tests App](https://vimeo.com/179279170) | [CI-CD-CT-Jenkins](https://vimeo.com/176071590) | [Docker-Databases](https://vimeo.com/168685388)| Amazon ECS Cluster - Instructor Led |
-| [An expressjs api app](https://vimeo.com/180445964) | [Selenium grid](https://vimeo.com/179279205) | [CI-CD-CT-Nexus](https://vimeo.com/178827586) | [Docker-Hadoop-Private](https://vimeo.com/168685492)| [Docker Swarm](https://github.com/machzqcq/docker-orchestration) |
-| [Integrate couchbase with api](https://vimeo.com/180445985) | [Containers for Test Execution](https://vimeo.com/179279599) | [CI-CD-CT-Sonarqube](https://vimeo.com/178828281) | [Docker-JenkinsCI](https://vimeo.com/168685559)| *Instructor Led*|
-| [Dockerize api app](https://vimeo.com/180516663) | [Full acceptance tests feedback loop - Private](https://vimeo.com/179279644) | [CI-CD-CT-SeleniumGrid](https://vimeo.com/178829673) | [Docker-applied-micro-services Private](https://vimeo.com/168685613)| *Instructor Led*|
-|[Build Unit Tests feedback loop](https://vimeo.com/180529349)| [SonarQube-TODO]()| [Ansible-Docker-Instructor Led]()|[Docker-Python-Notebooks](https://vimeo.com/168685694)| *Instructor Led*|
-|[Acceptance Tests feedback loop - Private](https://vimeo.com/180529568)| [SecurityTests-Instructor Led]()| [Kubernetes-Docker-Instructor Led]()| [More-Instructor Lead]()|*Instructor Led*|  
+| [Setup couchbase for api app](https://vimeo.com/180444021) (11:53) | [Acceptance Tests App](https://vimeo.com/179279170)(4:52) | [CI-CD-CT-Jenkins](https://vimeo.com/176071590)(36:05) | [Docker-Databases](https://vimeo.com/168685388)(12:11)| Amazon ECS Cluster - Instructor Led |
+| [An expressjs api app](https://vimeo.com/180445964))22:49) | [Selenium grid](https://vimeo.com/179279205)(11:25) | [CI-CD-CT-Nexus](https://vimeo.com/178827586))50:33) | [Docker-Hadoop-Private](https://vimeo.com/168685492))16:16)| [Docker Swarm](https://github.com/machzqcq/docker-orchestration) |
+| [Integrate couchbase with api](https://vimeo.com/180445985)(15:12) | [Containers for Test Execution](https://vimeo.com/179279599)(14:32) | [CI-CD-CT-Sonarqube](https://vimeo.com/178828281)(11:51) | [Docker-JenkinsCI](https://vimeo.com/168685559)(7:47)| *Instructor Led*|
+| [Dockerize api app](https://vimeo.com/180516663)(23:53) | [Full acceptance tests feedback loop - Private](https://vimeo.com/179279644)(12:22) | [CI-CD-CT-SeleniumGrid](https://vimeo.com/178829673)(10:39) | [Docker-applied-micro-services Private](https://vimeo.com/168685613)(15:09)| *Instructor Led*|
+|[Build Unit Tests feedback loop](https://vimeo.com/180529349)(15:58)| [SonarQube-TODO]()| [Ansible-Docker-Instructor Led]()|[Docker-Python-Notebooks](https://vimeo.com/168685694)(8:12)| *Instructor Led*|
+|[Acceptance Tests feedback loop - Private](https://vimeo.com/180529568)(10:43)| [SecurityTests-Instructor Led]()| [Kubernetes-Docker-Instructor Led]()| [More-Instructor Lead]()|*Instructor Led*|  
 
 
 
 | *Best Practices*                              |
 |-------------------------------------|
-| [Docker Build Labels](https://vimeo.com/183234013)   - Build labels, microbadger etc.          |  
-| [Docker bench security for docker hosts](https://vimeo.com/183236329) - Security best practices for deploying container in production|  
+| [Docker Build Labels](https://vimeo.com/183234013)   - Build labels, microbadger etc. (13:53)         |  
+| [Docker bench security for docker hosts](https://vimeo.com/183236329) - Security best practices for deploying container in production(5:47)|  
 
 
 
