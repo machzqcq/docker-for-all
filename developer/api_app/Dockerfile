@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y git curl wget procps && \
 # Change git:// to https:// as sometimes firewall seems to block git
 RUN git config --global url."https://".insteadOf git://
 # Run npm install to get all dependencies
-WORKDIR docker-for-ci/api_app/
+WORKDIR docker-for-all/api_app/
 RUN npm install
 EXPOSE 8080
 CMD [ "npm", "start" ]
