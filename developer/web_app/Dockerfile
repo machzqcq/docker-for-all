@@ -14,11 +14,11 @@ RUN tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.2.0.tar.gz
 
 # Install git client and clone repo
 RUN apt-get update && apt-get install -y git curl wget procps && \
-    git clone https://github.com/machzqcq/docker-developer.git
+    git clone https://github.com/machzqcq/docker-for-all.git
 # Change git:// to https:// as sometimes firewall seems to block git
 RUN git config --global url."https://".insteadOf git://
 # Run npm install to get all dependencies
-WORKDIR docker-developer/WebApp
+WORKDIR docker-for-all/developer/web_app
 RUN npm install
 
 # Define default command and wait until db is started
