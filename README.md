@@ -249,6 +249,11 @@ Access on http://$(docker-machine ip default):4040
 - `docker exec cicdctstack_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword` - Retrieves initial Admin password required for jenkins initial configuration  
 - `docker ps -a -q  --filter ancestor=<image-name>` - Return all containers that were spun off from the image-name  
 - `docker rm $(docker stop $(docker ps -a -q --filter ancestor=<image-name> --format="{{.ID}}"))` OR `docker ps --filter ancestor=blah -q | xargs -l docker rm` - stop all matching containers that have a matching image-name   
+- `dcleanup(){
+    docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
+    docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null}` - Add this shell function in your ~/.bash_profile. That way you can clean up containers first and then remove images.  
+- `docker system prune` - delete ALL unused data (i.e. in order: containers stopped, volumes without containers and images with no containers). Available in docker 1.13 [PR 26108](https://github.com/docker/docker/pull/26108)
+
 
 # Instructor led Training
 Instructor led training classes are available on request. Please email pradeep@seleniumframework.com
