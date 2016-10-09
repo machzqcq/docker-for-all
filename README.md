@@ -253,7 +253,8 @@ Access on http://$(docker-machine ip default):4040
 - `dcleanup(){
     docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null
     docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null}` - Add this shell function in your ~/.bash_profile. That way you can clean up containers first and then remove images.  
-- `docker system prune` - delete ALL unused data (i.e. in order: containers stopped, volumes without containers and images with no containers). Available in docker 1.13 [PR 26108](https://github.com/docker/docker/pull/26108)
+- `docker system prune` - delete ALL unused data (i.e. in order: containers stopped, volumes without containers and images with no containers). Available in docker 1.13 [PR 26108](https://github.com/docker/docker/pull/26108)  
+- `brew install bash-completion` - Add the instruction that is asked to add to ~/.bash_profile. Then execute [this](https://docs.docker.com/docker-for-mac/#/installing-bash-completion). This will greatly help auto-complete sub commands on docker, docker-compose and docker-machine
 
 
 # Instructor led Training
