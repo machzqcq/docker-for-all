@@ -226,16 +226,14 @@ Access on http://$(docker-machine ip default):4040
 
 ![Weave Scope](https://github.com/machzqcq/docker-for-all/blob/master/images/visualization.png)
 
-# In Continual Progress
+# Roadmap
 
-- [Docker Swarm & orchestration](https://github.com/machzqcq/docker-orchestration)
 - Docker various storage drivers and demos
 - Docker network drivers (including overlay networks)
 - Docker with Kubernetes
 - Docker with Apache Mesos
 - Docker UCP, DTR, dockerhub
 - Service Discovery using Consul, registrator etc. with patterns
-- More...  
 
 # Want to contribute?
 
