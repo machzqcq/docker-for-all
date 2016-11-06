@@ -212,7 +212,21 @@ Access Nexus 3 port 18082 on docker host. We use Nexus 3 so that we can set up a
 
 
 ## Monitoring and Visualization
+
+### cAdvisor 
+cAdvisor from google gives information on web UI at the host and container leve granularity.  
+
+[cAdvisor](https://github.com/machzqcq/docker-for-all/blob/master/images/cadvisor-dashboard.png)  
+
+[Setup Video](https://vimeo.com/190469368)
+ 
+
+### WeaveScope
+
 cAdvisor from Google provides basic container and host monitoring visualization, however weave scope takes it to a new level  
+
+![Weave Scope](https://github.com/machzqcq/docker-for-all/blob/master/images/visualization.png)  
+
 
 `docker-machine ssh default`  
 
@@ -224,7 +238,13 @@ scope launch
 
 Access on http://$(docker-machine ip default):4040   
 
-![Weave Scope](https://github.com/machzqcq/docker-for-all/blob/master/images/visualization.png)
+[Setup Video](https://vimeo.com/190469614)
+
+### Portainer 
+
+[Portainer](https://github.com/machzqcq/docker-for-all/blob/master/images/portainer_dashboard.png)  
+
+[Setup Video](https://vimeo.com/190472160)
 
 # Roadmap
 
