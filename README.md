@@ -243,6 +243,7 @@ Access on http://$(docker-machine ip default):4040
 
 # Valuable docker commands
 - `docker rmi $(docker images | grep "^<none>" | awk "{print $3}")` OR `docker images -q --filter "dangling=true" | xargs -l docker rmi` - Remove all images that are not tagged  
+- `docker rmi $(docker images | awk '$1 ~ /blah/ { print $3 }')` - Remove all images that have "blah" in its name (REPOSITORY column)
 - `docker stop $(docker ps -aq)` - Stop all running containers  
 - `docker rm $(docker ps -aq)` - Remove all non-running containers
 - `docker exec cicdctstack_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword` - Retrieves initial Admin password required for jenkins initial configuration  
