@@ -19,7 +19,7 @@ Software Development involves quite a bit of trade-off decisions and is composed
 - If you are devops - then start with devops folder
 - If you are polyglot beast - read everything
 - Below table has links to videos - click each to watch before you invest time in coding
-- Some Videos below (marked Private) are available only after you sign up for the course and email [here](pradeep@seleniumframework.com)
+- email if you have questions [here](pradeep@seleniumframework.com)
 
 # Value Add - Concepts
 Each of the link in the below table is a video that demonstrates the value add. If the video demonstrates value in what you do, then step into folders for granular details.  
