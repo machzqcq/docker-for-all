@@ -9,23 +9,26 @@ services:
       - selhub
     environment:
       - HUB_PORT_4444_TCP_ADDR=selhub
-    image: selenium/node-chrome
+      - DBUS_SESSION_BUS_ADDRESS=/dev/null
+    image: selenium/node-chrome:3.0.1-carbon
     networks:
       - sel-net
     ports:
       - "5900"
+    volumes:
+      - /dev/shm:/dev/shm
   nodeff:
     depends_on:
       - selhub
     environment:
       - HUB_PORT_4444_TCP_ADDR=selhub
-    image: selenium/node-firefox
+    image: selenium/node-firefox:3.0.1-carbon
     networks:
       - sel-net
     ports:
       - "5900"
   selhub:
-    image: selenium/hub
+    image: selenium/hub:3.0.1-carbon
     networks:
       - sel-net
     ports:
