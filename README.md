@@ -81,17 +81,17 @@ This code helps developers, devops and testers (ok I will be honest , test "auto
 - Build our custom test environment containers from Docker manifests - we ensure that jenkins can remotely ssh into these containers and these containers have the necessary runtime for running automated tests
 - Docker compose helps start the entire lab with containers
 - Jenkins container talks back to the docker engine that launches it - This is so that Jenkins can launch test containers as slaves during execution. We did a small hack here i.e. copied the *.pem files to the jenkins container
-- Tester - The web application that we use is already hosted on [AutomationPractice](http://automationpractice.com/index.php) - This website has been in use for all our tutorials hosted on [Selenium Framework](http://www.seleniumframework.com)
-- Tester - It is possible to host the application under test in a separate container, so that everything runs locally. This step is taught in the classes that we conduct
-- Tester - Execute integration tests that launch browsers in Selenium Grid and test the web application
-- Tester - Results will be seen as cucumber graphs in Jenkins
-- Tester - Test containers come up during execution and then automatically disconnect from Jenkins master after execution  
-- Developer - Start writing an expressjs api with integration to Couchbase and go through step by step utilizing docker and containing the environments
-- Developer - Align with Continuous Delivery practices while developing the application following 12-Factor app principles
-- Developer - Experience the containerization concepts and how they ultimately help producing a high quality, scalable, reliable system
-- DevOps - Understand the concepts of Continuous Integration, Dependency management of libraries and deploy/maintain enterprise grade servers. Start with a lab environment in this repo, but scale it to wherever you would like to.
-- DevOps - Infrastructure as Code, Infrastructure as service, platform as code, platform as service -- Understand, implement the concepts with docker and experience Automation at all layers in a software development stack
-- Product Owner - Without getting too deep into technology, experience Docker and its power of being able to communicate context(s)
+- *Tester* - The web application that we use is already hosted on [AutomationPractice](http://automationpractice.com/index.php) - This website has been in use for all our tutorials hosted on [Selenium Framework](http://www.seleniumframework.com)
+- *Tester* - It is possible to host the application under test in a separate container, so that everything runs locally. This step is taught in the classes that we conduct
+- *Tester* - Execute integration tests that launch browsers in Selenium Grid and test the web application
+- *Tester* - Results will be seen as cucumber graphs in Jenkins
+- *Tester* - Test containers come up during execution and then automatically disconnect from Jenkins master after execution  
+- *Developer* - Start writing an expressjs api with integration to Couchbase and go through step by step utilizing docker and containing the environments
+- *Developer* - Align with Continuous Delivery practices while developing the application following 12-Factor app principles
+- *Developer* - Experience the containerization concepts and how they ultimately help producing a high quality, scalable, reliable system
+- *DevOps* - Understand the concepts of Continuous Integration, Dependency management of libraries and deploy/maintain enterprise grade servers. Start with a lab environment in this repo, but scale it to wherever you would like to.
+- *DevOps* - Infrastructure as Code, Infrastructure as service, platform as code, platform as service -- Understand, implement the concepts with docker and experience Automation at all layers in a software development stack
+- *Product Owner* - Without getting too deep into technology, experience Docker and its power of being able to communicate context(s)
 
 # Environment/Lab setup Architecture
 
