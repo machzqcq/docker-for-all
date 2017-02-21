@@ -52,7 +52,7 @@ It is highly recommended to complete the fundamental concepts videos before movi
 | [Integrate couchbase with api](https://vimeo.com/180445985)(15:12) | [Containers for Test Execution](https://vimeo.com/179279599)(14:32) | [CI-CD-CT-Sonarqube](https://vimeo.com/178828281)(11:51) | [Docker-JenkinsCI](https://vimeo.com/168685559)(7:47)| [Docker Swarm - Services](https://vimeo.com/189543080)(40:07)|
 | [Dockerize api app](https://vimeo.com/180516663)(23:53) | [Full acceptance tests feedback loop](https://vimeo.com/179279644)(12:22) | [CI-CD-CT-SeleniumGrid](https://vimeo.com/178829673)(10:39) | [Docker-applied-micro-services](https://vimeo.com/168685613)(15:09)| *Ops Dashboard - Visualization* [cAdvisor](https://vimeo.com/190469368) (11:21), [weavescope](https://vimeo.com/190469614) (23:10), [portainer](https://vimeo.com/190472160)(23:09)|
 |[Build Unit Tests feedback loop](https://vimeo.com/180529349)(15:58)| [SonarQube Analysis](https://vimeo.com/200776872)(21:56)| [Ansible-Docker-Instructor Led]()|[Docker-Python-Notebooks](https://vimeo.com/168685694)(8:12)| [Manager Docker deployments in Production - Rancher](https://vimeo.com/197476650)(51:00)|
-|[Acceptance Tests feedback loop](https://vimeo.com/180529568)(10:43)| [SecurityTests-Instructor Led]()| [Kubernetes-Docker-Instructor Led]()| [More-Instructor Lead]()|*Instructor Led*|  
+|[Acceptance Tests feedback loop](https://vimeo.com/180529568)(10:43)| [SecurityTests-Instructor Led]()| [Kubernetes-Docker-Intro](https://vimeo.com/205127936)(24:42)| [More-Instructor Lead]()|*Instructor Led*|  
 
 
 
