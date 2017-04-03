@@ -39,4 +39,4 @@ scope launch
 
 Access on http://host|ip:4040  
 
-![Weave Scope]()
+![Weave Scope](./images/weave_scope.png)
