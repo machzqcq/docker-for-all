@@ -1,7 +1,7 @@
 # Used to start a selenium grid with a chrome and ff, one of each
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose-v2.yml up -d
 ```
 
 This should start a selenium grid with hub listening on 4444, nodes are automatically registered to the hub.
@@ -12,13 +12,13 @@ Verify by hitting the url on http://docker-daemon-dns/ip:4444/grid/console
 If you wish to increase the # of chrome browsers for example
 
 ```
-docker-compose scale nodech=4 nodeff=3
+docker-compose -f docker-compose-v2.yml scale nodech=4 nodeff=3
 ```
 
 This will scale the grid to have a total of 4 chrome instances and 3 firefox instances.
 
 ```
-docker-compose scale nodech=1 nodeff=1
+docker-compose -f docker-compose-v2.yml scale nodech=1 nodeff=1
 ```
 This will scale the grid to have a total of 1 ch and 1 ff instance (will stop if there are extra)
 
@@ -39,4 +39,13 @@ scope launch
 
 Access on http://host|ip:4040  
 
-![Weave Scope](./images/weave_scope.png)
+![Weave Scope](./images/weave_scope.png)  
+
+## Swarm
+On a docker swarm and using docker-compose V3, the below   
+
+`docker stack deploy --compose-file docker-compose-v3.yml sel-grid`
+
+
+
+
