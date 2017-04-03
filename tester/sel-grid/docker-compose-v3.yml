@@ -1,0 +1,43 @@
+version: "3"
+
+networks:
+  grid:
+services:
+  nodech:
+    depends_on:
+      - selhub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selhub
+      - DBUS_SESSION_BUS_ADDRESS=/dev/null
+    image: selenium/node-chrome:2.53.0
+    networks:
+      - grid
+    ports:
+      - "5900"
+    volumes:
+      - /dev/shm:/dev/shm
+    deploy:
+      mode: replicated
+      replicas: 2
+  nodeff:
+    depends_on:
+      - selhub
+    environment:
+      - HUB_PORT_4444_TCP_ADDR=selhub
+    image: selenium/node-firefox:2.53.0
+    networks:
+      - grid
+    ports:
+      - "5900"
+    deploy:
+      mode: replicated
+      replicas: 2
+  selhub:
+    image: selenium/hub:2.53.0
+    networks:
+      - grid
+    ports:
+      - "4444:4444"
+    deploy:
+      mode: replicated
+      replicas: 1
