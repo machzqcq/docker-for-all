@@ -1,0 +1,46 @@
+# https://github.com/zalando/zalenium
+# Usage:
+#   docker stack deploy --compose-file docker-compose-v3-swarm.yml grid
+version: '3'
+networks:
+  grid:
+services:
+  #--------------#
+  zalenium:
+    image: "dosel/zalenium"
+    hostname: zalenium
+    tty: true
+    volumes:
+      - /tmp/videos:/home/seluser/videos
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /usr/local/bin/docker:/usr/bin/docker
+    ports:
+      - 4444:4444
+      - 5555:5555
+    networks:
+      - grid
+    command: >
+      start --chromeContainers 2
+            --firefoxContainers 2
+            --maxDockerSeleniumContainers 8
+            --screenWidth 1930 --screenHeight 1090
+            --timeZone "Europe/Berlin"
+            --videoRecordingEnabled true
+            --sauceLabsEnabled false
+            --browserStackEnabled false
+            --testingBotEnabled false
+            --startTunnel false
+    environment:
+      - SAUCE_USERNAME
+      - SAUCE_ACCESS_KEY
+      - BROWSER_STACK_USER
+      - BROWSER_STACK_KEY
+      - TESTINGBOT_KEY
+      - TESTINGBOT_SECRET
+      # For OSX remember to include the docker version
+      # allowed values are: 1.11 or 1.12 or 1.13
+      # - DOCKER=1.11
+      # but leave empty for latest or in general for docker >= 17.03.0
+    deploy:
+      mode: replicated
+      replicas: 1
