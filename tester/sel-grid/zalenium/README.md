@@ -19,3 +19,13 @@ Access grid on :4444/grid/console
 Access live videos on :4444/grid/admin/live
 
 *Note* Do NOT forget to read the above documentation. There are many cool features`
+
+# Test
+
+- open the live video url 
+- checkout this repo, step into acceptance_tests folder
+- `bundle install`
+- `bundle exec cucumber features\Login.feature WHERE=remote BROWSER=chrome SAUCE_GRID_URL=http://192.168.99.100:4444/wd/hub
+`
+
+This should kick off the tests (assuming that the docker host ip or swarm endpoint is 192.168.99.100)
