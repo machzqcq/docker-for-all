@@ -10,7 +10,7 @@
 #docker-machine scp ~/.docker/machine/machines/default/cert.pem default:/home/docker/.docker/
 #docker-machine scp ~/.docker/machine/machines/default/key.pem default:/home/docker/.docker/
 
-FROM jenkins:2.7.1-alpine
+FROM jenkins:2.46.1-alpine
 MAINTAINER Pradeep Macharla <pradeep@seleniumframework.com>
 USER root
 
