@@ -60,7 +60,17 @@ It is highly recommended to complete the fundamental concepts videos before movi
 |-------------------------------------|
 | [Docker Build Labels](https://vimeo.com/183234013)   - Build labels, microbadger etc. (13:53)         |  
 | [Docker bench security for docker hosts](https://vimeo.com/183236329) - Security best practices for deploying container in production(5:47)|  
-| [Docker Bash completion tips](https://vimeo.com/186178609) - Use Homebrew bash completion instead of --help to save time |  
+| [Docker Bash completion tips](https://vimeo.com/186178609) - Use Homebrew bash completion instead of --help to save time |   
+
+
+## Examples Labels 
+Some of the labels below apply at build time, and some at deploy time (i.e. they are function of environment for e.g.)  
+
+"release" : "stable", "release" : "canary"
+"environment" : "dev", "environment" : "qa", "environment" : "production"
+"tier" : "frontend", "tier" : "backend", "tier" : "cache"
+"partition" : "customerA", "partition" : "customerB"
+"track" : "daily", "track" : "weekly"  
 
 
 
