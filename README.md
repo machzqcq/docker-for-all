@@ -72,6 +72,10 @@ Some of the labels below apply at build time, and some at deploy time (i.e. they
 "partition" : "customerA", "partition" : "customerB"  
 "track" : "daily", "track" : "weekly"    
 
+This might be useful to do the following:  
+
+`$ kubectl get pods -l environment=production,tier=frontend`  
+
 
 
 # A training course for learning containerization and Automation 
