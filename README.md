@@ -66,11 +66,11 @@ It is highly recommended to complete the fundamental concepts videos before movi
 ## Examples Labels 
 Some of the labels below apply at build time, and some at deploy time (i.e. they are function of environment for e.g.)  
 
-"release" : "stable", "release" : "canary"
-"environment" : "dev", "environment" : "qa", "environment" : "production"
-"tier" : "frontend", "tier" : "backend", "tier" : "cache"
-"partition" : "customerA", "partition" : "customerB"
-"track" : "daily", "track" : "weekly"  
+"release" : "stable", "release" : "canary"  
+"environment" : "dev", "environment" : "qa", "environment" : "production"  
+"tier" : "frontend", "tier" : "backend", "tier" : "cache"  
+"partition" : "customerA", "partition" : "customerB"  
+"track" : "daily", "track" : "weekly"    
 
 
 
