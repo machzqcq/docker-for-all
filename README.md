@@ -9,7 +9,7 @@ Software Development with high quality, security, reliability etc. is not as eas
 
 Software Development involves quite a bit of trade-off decisions and is composed of millions of components talking to each other. The intent is to say that there are dependency chains of communication and software engineers have to build layer on top of layers, that eventually becomes a software , either available on internet or something that can be installed by oneself.  
 
-<strong>Docker helps minimize the complexity of management of those dependency chains across layers</strong>   
+<strong>Docker helps minimize the complexity of managing those dependency chains across layers</strong>   
 
 ![Docker Ecosystem](https://github.com/machzqcq/docker-for-all/blob/master/images/DockerEcosystem.jpg)  
 
