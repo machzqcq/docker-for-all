@@ -1,20 +1,23 @@
 Vagrant.configure("2") do |config|
-  config.vm.define "master" do |master|
-	master.vm.box = "ubuntu/xenial64"
-	master.vm.hostname = "c1-master1"
-	master.vm.network "private_network", ip: "192.168.99.100"
+  config.vm.define "kubemaster" do |kubemaster|
+	kubemaster.vm.box = "ubuntu/xenial64"
+	kubemaster.vm.hostname = "kubemaster"
+	kubemaster.vm.network "private_network", ip: "192.168.99.100"
+  kubemaster.vm.provision :shell, path: "Vagrant.bootstrap.sh"
   end
 
-  config.vm.define "snode1" do |snode1|
-	snode1.vm.box = "ubuntu/xenial64"
-	snode1.vm.hostname = "c1-node1"
-	snode1.vm.network "private_network", ip: "192.168.99.200"
+  config.vm.define "kubenode1" do |kubenode1|
+	kubenode1.vm.box = "ubuntu/xenial64"
+	kubenode1.vm.hostname = "kubenode1"
+	kubenode1.vm.network "private_network", ip: "192.168.99.200"
+  kubenode1.vm.provision :shell, path: "Vagrant.bootstrap.sh"
   end
 
-  config.vm.define "snode2" do |snode2|
-	snode2.vm.box = "ubuntu/xenial64"
-	snode2.vm.network "private_network", ip: "192.168.99.300"
-	snode2.vm.hostname = "c1-node2"
+  config.vm.define "kubenode2" do |kubenode2|
+	kubenode2.vm.box = "ubuntu/xenial64"
+	kubenode2.vm.hostname = "kubenode2"
+  kubenode2.vm.network "private_network", ip: "192.168.99.300"
+  kubenode2.vm.provision :shell, path: "Vagrant.bootstrap.sh"
   end
 
   config.vm.provider "virtualbox" do |v|
