@@ -19,7 +19,7 @@ iptables -F
 service iptables save
 
 # Install docker from official repo
-yum install -y yum-utils
+yum install -y yum-utils wget
 yum-config-manager –add-repo \
 https://docs.docker.com/engine/installation/linux/repo_files/centos/docker.repo
 yum makecache fast
