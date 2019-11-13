@@ -1,6 +1,6 @@
 # Preconditions
 
-- Needed ONLY if you want to set up kubernetes multi node (single master) from scratch using kubeadm (Otherwise minikube is good enough for most purposes if your focus is on deploying applications to kube and NOT administration). See how to [minikube](https://vimeo.com/205127936) , which is already in the parent readme index
+- Needed ONLY if you want to set up kubernetes multi node (single control-plane cluster i.e. one master node) from scratch using kubeadm (Otherwise minikube is good enough for most purposes if your focus is on deploying applications to kube and NOT administration). See how to [minikube](https://vimeo.com/205127936) , which is already in the parent readme index
 - Frankly if you are not into devops/infra admin, this is overkill and not a good investment of your time, especially given there are so many managed kubernetes deployment like EKS, GCP, Azure and so many more optins with Kops,Ansible etc.
 - Then why am I doing this ? My mind works better when I set up things from scratch at least once
 - Assuming you have basic knowledge of hypervisor(s) i.e. virtual machines with VMware, virtualbox or similar. Also vagrant, which is command line way of upping vm's
