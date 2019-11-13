@@ -51,7 +51,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF'
  
-sysctl --system
+sudo sysctl --system
 
 # Ensure it stars upon reboot
 systemctl restart docker && systemctl enable docker
