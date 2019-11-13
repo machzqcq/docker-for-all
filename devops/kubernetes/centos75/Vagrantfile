@@ -1,20 +1,20 @@
 Vagrant.configure("2") do |config|
   config.vm.define "kubemaster" do |kubemaster|
-	kubemaster.vm.box = "ubuntu/xenial64"
+	kubemaster.vm.box = "centos/7"
 	kubemaster.vm.hostname = "kubemaster"
 	kubemaster.vm.network "private_network", ip: "192.168.99.100"
   kubemaster.vm.provision :shell, path: "Vagrant.bootstrap.sh"
   end
 
   config.vm.define "kubenode1" do |kubenode1|
-	kubenode1.vm.box = "ubuntu/xenial64"
+	kubenode1.vm.box = "centos/7"
 	kubenode1.vm.hostname = "kubenode1"
 	kubenode1.vm.network "private_network", ip: "192.168.99.101"
   kubenode1.vm.provision :shell, path: "Vagrant.bootstrap.sh"
   end
 
   config.vm.define "kubenode2" do |kubenode2|
-	kubenode2.vm.box = "ubuntu/xenial64"
+	kubenode2.vm.box = "centos/7"
 	kubenode2.vm.hostname = "kubenode2"
   kubenode2.vm.network "private_network", ip: "192.168.99.102"
   kubenode2.vm.provision :shell, path: "Vagrant.bootstrap.sh"
