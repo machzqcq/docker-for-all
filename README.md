@@ -293,7 +293,7 @@ Access on http://$(docker-machine ip default):4040
 
 
 # Instructor led Training
-Instructor led training classes are available on request. Please email pradeep@seleniumframework.com
+Instructor led training classes are available on request. Please email info@techsparks.guru
 
 
 
