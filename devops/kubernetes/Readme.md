@@ -1,7 +1,7 @@
 # Preconditions
 
 - Needed ONLY if you want to set up kubernetes multi node (single control-plane cluster i.e. one master node) from scratch using kubeadm (Otherwise minikube is good enough for most purposes if your focus is on deploying applications to kube and NOT administration). See how to [minikube](https://vimeo.com/205127936) , which is already in the parent readme index
-- Frankly if you are not into devops/infra admin, this is overkill and not a good investment of your time, especially given there are so many managed kubernetes deployment like EKS, GCP, Azure and so many more optins with Kops,Ansible etc.
+- Frankly if you are not into devops/infra admin, this is overkill and not a good investment of your time, especially given there are so many managed kubernetes deployment like EKS, GCP, Azure and so many more options with Kops,Ansible etc.
 - Then why am I doing this ? My mind works better when I set up things from scratch at least once
 - Assuming you have basic knowledge of hypervisor(s) i.e. virtual machines with VMware, virtualbox or similar. Also vagrant, which is command line way of upping vm's
 - I tried with Ubuntu16.06 and Centos7.5 , and each folder contains scripts that match that OS
@@ -13,7 +13,7 @@
 
 # How it works
 
-- Once you have your infra layer set up with Vagrant and prepared each of your nodes (i.e. Vagrant.bootstrap.sh ran successfully getting all packages), its time to sping up a Kubernetes cluster
+- Once you have your infra layer set up with Vagrant and prepared each of your nodes (i.e. Vagrant.bootstrap.sh ran successfully getting all packages), its time to spin up a Kubernetes cluster
 - Look into the script `create_master.sh` and `create_node.sh` - I would encourage to take each line and manually execute it , so that we can appreciate and sink in how the system is spun up with layers and mentally form a map. The map becomes your navigation and `confidence/comfort` as you get into advanced concepts of using kubernetes
 - The overall flow that mentally sits in my mind after executing this and making it work for days is as below
     - Prepare Infra layer with vagrant - have hostonly and NAT network configured for each node. Ensure that your hostonly network cidr doesn't collide with other network namespaces for e.g. your host on which you launch vagrant
