@@ -126,8 +126,9 @@ This code helps developers, devops and testers (ok I will be honest , test "auto
 - Any service I had to access on docker host, I had port mappings already defined , so that I can access the service from my laptop , instead of vnc'ng into the mac-mini. For example 18080:18080 to access jenkins container. So if 192.168.99.100 is the docker host and 192.168.1.8 is ip of mac-mini, then I can access Jenkins either on http://192.168.99.100:18080 from mac-mini OR http://192.168.1.8:18080 from anywork on the network, since my laptop is in the same network as mac-mini.
 - During this training course, we do everything locally i.e. on virtualbox , however docker-machine can talk to pretty much any of the public clouds through its drivers, hence you can choose to have your compute, storage and network in AWS, Digital Ocean et al. if you prefer it that way. The only difference would be to provider the driver name while creating the docker machine.
 
-# Actual Steps
+# Warmup Steps (for devops folder)
 
+- Reason we are doing devops folder - so that it acts as a warmup for hands-on
 - Install Docker ToolBox. Detailed Video [here](https://vimeo.com/168685756)
 - Create a docker machine with name 'default' `docker-machine create --driver virtualbox default`
 ```
@@ -151,7 +152,7 @@ To see how to connect Docker to this machine, run: docker-machine env default
 ```
 - Docker compose - Already comes with Docker Toolbox, nothing to do
 - Open a terminal, ssh and git clone 
-- cd into ci-cd-ct-stack/jenkins2
+- cd into devops/ci-cd-ct-stack/jenkins2
 - `/bin/bash copy_certs_default.sh' - This will copy the ca.pem, cert.pem and key.pem to /home/docker/.docker. The reason we do this is because we want the jenkins to be able to instantiate containers on 'default' docker machine. This is not required, infact we do this only in a lab environment. Recommended production set up will have Jenkins on separate host  
 ```
 pradeep@seleniumframework>/bin/bash copy_certs_default.sh
@@ -160,7 +161,7 @@ cert.pem                                                                        
 key.pem                                                                                    100% 1675     1.6KB/s   00:00
 
 ```
-- cd into ci-cd-st-stack and `docker-compose up` - This will start Jenkins, Nexus, SonarQube and Selenium GRID (See below the port mappings) - see Videos in the table above for demonstration    
+- cd into devops/ci-cd-st-stack and `docker-compose up` - This will start Jenkins, Nexus, SonarQube and Selenium GRID (See below the port mappings) - see Videos in the table above for demonstration    
 
 | *Service* | *Link* | *Credentials* |
 | ------------- | ------------- | ------------- |
