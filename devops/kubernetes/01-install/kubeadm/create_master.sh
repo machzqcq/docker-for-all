@@ -1,6 +1,8 @@
 # This is because my wifi ip 192.168.0.0/16 conflicts with default calico.yml
 # Hence I download the manifest, edit so that I can match it with 192.168.99.1/16
 # I chose 192.168.99.1/16 because virtualbox gives me this cidr out of the box
+# Pod network cidr does NOT have to align with apiserver-advertise address
+# For e.g. you can use --pod-network-cidr=192.168.33.1/16
 wget https://docs.projectcalico.org/v3.10/manifests/calico.yaml
 sed -i 's/192.168.0.0/192.168.99.1/g' calico.yaml
 sudo kubeadm init --pod-network-cidr=192.168.99.1/16 --apiserver-advertise-address=192.168.99.100
