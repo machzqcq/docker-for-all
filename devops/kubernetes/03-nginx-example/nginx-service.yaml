@@ -1,0 +1,17 @@
+---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: nginx-service-np
+      labels:
+        name: nginx-service-np
+    spec:
+      type: NodePort
+      ports:
+        - port: 8082        # Cluster IP, i.e. http://10.103.75.9:8082
+          targetPort: 8080  # Application port
+          nodePort: 30000   # (EXTERNAL-IP VirtualBox IPs) i.e. http://192.168.99.100:30000/ http://192.168.99.101:30000/ http://192.168.99.102:30000/
+          protocol: TCP
+          name: http
+      selector:
+        app: nginx
