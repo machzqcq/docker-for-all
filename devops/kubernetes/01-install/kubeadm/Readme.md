@@ -20,6 +20,12 @@
 - I was setting this up at home and my wifi router ip was 192.168.0.x (Ensure that you do NOT select cidr similar to that range, when setting hostonly ips in Vagrantfile). I probably lost an entire week not understanding why kubernetes was not coming up, the root cause was because my hostonly ip within vm was also 192.168.0.x , which was conflicting with my host machine's ip
 - After `vagrant up` - probably have to ssh into each machine and set the static ip manually (I was using sed to write, somehow it was working, will revisit this later and code it off in the bootstrap script). For example ensure you replace `127.0.0.1   kubemaster   kubemaster` with `192.168.99.100  kubemaster`. Likewise for kubenode1 and kubenode2
 - Also after upping the cluster `kubectl get nodes -o wide` shows internal-ips to be the same for all nodes. Somehow kubeadm is picking up the NAT address , and since it is the same for all nodes, all get assigned the same. To fix this I had to manually open the file `/var/lib/kubelet/kubeadm-flags.env` and add the node-ips for kubemaster, kubenode1 & kubenode2 as - `KUBELET_KUBEADM_ARGS="--node-ip=192.168.99.100 --cgroup-driver=cgroupfs --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.1"`. Don't forget to restart `sudo service kubelet restart`
+- If you see this message during `kube init`, then follow instructions [here](https://kubernetes.io/docs/setup/production-environment/container-runtimes/#docker), that shows how to install docker exactly as kubernetes expects it to be - in thise case the cgroup driver  
+```
+[init] Using Kubernetes version: v1.17.0
+[preflight] Running pre-flight checks
+        [WARNING IsDockerSystemdCheck]: detected "cgroupfs" as the Docker cgroup driver. The recommended driver is "systemd". Please follow the guide at https://kubernetes.io/docs/setup/cri/
+```
 - If you have set up docker swarm in the past (I used docker-machine and vagrant, but docker-machine rocks with ease of use, the only problem is that it locks you up with busybox image and does not let us choose ubuntu/centos etc.), then kubernetes set up aligns mostly , especially around upping the master and then joining the nodes using token and discovery token. [Docker Swarm refresher](https://vimeo.com/189520997)
 
 # How it works
