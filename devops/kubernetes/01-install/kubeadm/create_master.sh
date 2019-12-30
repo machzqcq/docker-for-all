@@ -33,4 +33,5 @@ kubectl get nodes
 # kubectl get nodes -o wide
 sudo vi /var/lib/kubelet/kubeadm-flags.env
 KUBELET_KUBEADM_ARGS="--node-ip=192.168.99.100 --cgroup-driver=cgroupfs --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.1"
+sudo service kubelet restart
 # repeat on every node, based on the static ip you assinged when upping the vm
