@@ -18,3 +18,17 @@ kubectl get services -o wide
 ```
 - curl http://<clusterip:8082> from kubemaster
 - curl http://192.168.99.100:30000 from host machine
+
+# Export manifests
+- kubectl get service nginx -o yaml
+- kubectl get service nginx -o json
+- kubectl get service nginx -o yaml --export  > service-nginx.yaml (cluster info is stripped)
+
+# explain
+- kubectl explain service | more
+- kubectl explain service.spec | more
+- kubectl explain service.spec.ports | more
+
+# Delete
+- kubectl delete service nginx
+- kubectl delete deployment nginx
