@@ -27,3 +27,10 @@ kubectl get pods --all-namespaces
 
 #Get a list of our current nodes, just the master.
 kubectl get nodes 
+
+# If all node iternal-IPS are same , then do the below
+# I was using virtualbox and the NAT address (10.0.2.15) was the internal IP for all nodes in cluster
+# kubectl get nodes -o wide
+sudo vi /var/lib/kubelet/kubeadm-flags.env
+KUBELET_KUBEADM_ARGS="--node-ip=192.168.99.100 --cgroup-driver=cgroupfs --network-plugin=cni --pod-infra-container-image=k8s.gcr.io/pause:3.1"
+# repeat on every node, based on the static ip you assinged when upping the vm
