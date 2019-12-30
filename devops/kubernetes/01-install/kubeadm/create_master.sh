@@ -5,7 +5,7 @@
 # For e.g. you can use --pod-network-cidr=192.168.33.1/16
 wget https://docs.projectcalico.org/v3.10/manifests/calico.yaml
 sed -i 's/192.168.0.0/192.168.99.1/g' calico.yaml
-sudo kubeadm init --pod-network-cidr=192.168.99.1/16 --apiserver-advertise-address=192.168.99.100
+sudo kubeadm init --pod-network-cidr=192.168.33.1/16 --apiserver-advertise-address=192.168.99.100
 
 #Configure our account on the master to have admin access to the API server from a non-privileged account.
 mkdir -p $HOME/.kube
