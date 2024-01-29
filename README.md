@@ -109,11 +109,11 @@ This code helps developers, devops and testers (ok I will be honest , test "auto
 
 # Environment/Lab setup Architecture
 
-###Mac Mini
+### Mac Mini
 
 ![My Setup](https://github.com/machzqcq/docker-for-all/blob/master/images/MySetup.png)  
 
-###Windows
+### Windows
 
 ![My Setup Windows](https://github.com/machzqcq/docker-for-all/blob/master/images/MySetup-windows.png)  
 
@@ -294,7 +294,7 @@ Access on http://$(docker-machine ip default):4040
 
 
 # Instructor led Training
-Instructor led training classes are available on request. Please email info@techsparks.guru
+Instructor led training classes are available on request. Please [email](pradeep@seleniumframework.com)
 
 
 
